@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,39 +58,22 @@
 </head>
 <body>
     <div class="container">
-        <span class="badge">Plataforma Oficial</span>
+        <span class="badge">Official Portal</span>
         <h1>FIFA Compliance Assistant</h1>
-        <p>Bienvenido al portal de consulta de normativa FIFA, Clearing House y protección de menores.</p>
-        <p>Haz clic en el botón de chat en la esquina inferior derecha para iniciar la consulta con la Inteligencia Artificial.</p>
+        <p>Welcome to the official portal for FIFA Regulations, Clearing House, and Protection of Minors compliance queries.</p>
+        <p>Click the chat button in the bottom right corner to start your consultation with the AI Assistant.</p>
     </div>
 
-    <!-- Coze Web SDK -->
-    <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-core/0.1.0-alpha.5/plugin/in-page/index.js"></script>
+    <!-- Coze Web SDK (Versión Internacional) -->
+    <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
     <script>
       new CozeWebSDK.WebChatClient({
         config: {
-          bot_id: 
-<script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
-<script>
-  new CozeWebSDK.WebChatClient({
-    config: {
-      bot_id: '7663564679269203973',
-    },
-    componentProps: {
-      title: 'Coze',
-    },
-    auth: {
-      type: 'token',
-      token: 'pat_********',
-      onRefreshToken: function () {
-        return 'pat_********'
-      }
-    }
-  });
-</script>
+          bot_id: '7663564679269203973',
         },
         componentProps: {
           title: 'FIFA Compliance AI',
+          lang: 'en',
         },
       });
     </script>
