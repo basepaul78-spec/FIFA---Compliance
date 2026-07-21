@@ -1,143 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIFA Compliance AI Assistant</title>
+    <title>FIFA Compliance AI | Portal de Consultas</title>
     <style>
-        * {
-            box-sizing: border-box;
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #38bdf8;
+            --border-color: #334155;
+        }
+
+        body {
             margin: 0;
             padding: 0;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0f172a;
-            color: #f8fafc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             min-height: 100vh;
-            padding: 20px;
         }
-        .card {
-            width: 100%;
-            max-width: 850px;
-            background-color: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 16px;
-            padding: 40px 28px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+
+        header {
             text-align: center;
+            padding: 2.5rem 1rem 1.5rem;
+            max-width: 800px;
         }
-        .badge {
-            display: inline-block;
-            background-color: #0284c7;
-            color: #ffffff;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 16px;
-            letter-spacing: 0.05em;
-        }
+
         h1 {
-            font-size: 2.2rem;
-            color: #38bdf8;
-            margin-bottom: 12px;
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
         }
-        p {
+
+        p.subtitle {
             font-size: 1.1rem;
-            color: #94a3b8;
-            margin-bottom: 32px;
+            color: var(--text-secondary);
             line-height: 1.6;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0;
         }
-        .features {
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 0 1rem 3rem;
+            box-sizing: border-box;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 16px;
-            margin-top: 10px;
-            text-align: left;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
         }
-        .feature-item {
-            background: #0f172a;
-            padding: 20px;
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
-            border: 1px solid #334155;
+            padding: 1.25rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
         }
-        .feature-item h3 {
-            font-size: 1rem;
-            color: #38bdf8;
-            margin-bottom: 6px;
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
         }
-        .feature-item p {
-            font-size: 0.88rem;
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
             margin-bottom: 0;
-            color: #64748b;
-            line-height: 1.4;
         }
-        .chat-hint {
-            margin-top: 28px;
-            padding: 12px;
-            background-color: rgba(2, 132, 199, 0.1);
-            border: 1px dashed #0284c7;
-            border-radius: 8px;
-            color: #38bdf8;
-            font-size: 0.9rem;
-            font-weight: 500;
+
+        footer {
+            margin-top: auto;
+            padding: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <span class="badge">Official AI Assistant</span>
-        <h1>FIFA Compliance Portal</h1>
-        <p>Expert legal guidance on FIFA Regulations, Protection of Minors, FIFA Clearing House procedures, and Transfer Matching System (TMS) compliance based on the work of Paul Velásquez.</p>
+    <header>
+        <h1>Compliance Portal</h1>
+        <p class="subtitle">
+            Expert legal guidance on FIFA Regulations, Protection of Minors, FIFA Clearing House procedures, and Transfer Matching System (TMS) compliance based on the work of Paul Velásquez.
+        </p>
+    </header>
 
-        <div class="features">
-            <div class="feature-item">
-                <h3>Minors Protection</h3>
-                <p>Rules & exceptions for international transfers of youth players (Article 19 RSTP).</p>
-            </div>
-            <div class="feature-item">
-                <h3>Clearing House</h3>
-                <p>Training compensation, electronic passports, and solidarity contribution calculations.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Regulatory Search</h3>
-                <p>Instant answers on current FIFA statutes, jurisprudence, and enforcement.</p>
-            </div>
+    <div class="container">
+        <div class="card">
+            <h3>Minors Protection</h3>
+            <p>Rules & exceptions for international transfers of youth players (Article 19 RSTP).</p>
         </div>
-
-        <div class="chat-hint">
-            💬 Click on the chat icon at the bottom right corner of your screen to start consulting.
+        <div class="card">
+            <h3>Clearing House</h3>
+            <p>Training compensation, electronic passports, and solidarity contribution calculations.</p>
+        </div>
+        <div class="card">
+            <h3>Regulatory Search</h3>
+            <p>Instant answers on current FIFA regulations and official circulars.</p>
         </div>
     </div>
 
-    <!-- Script Oficial de Coze WebChatClient v1.2.0-beta.6 con Autenticación Integrada -->
-    <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
-    <script>
-        new CozeWebSDK.WebChatClient({
-            config: {
-                bot_id: '7663564679269203973',
-            },
-            componentProps: {
-                title: 'FIFA Compliance AI',
-            },
-            auth: {
-                type: 'token',
-                token: 'Pat_A4hZ6k8R9GcCNfCFUhVksZFahefe0tgkFV1vDkdf9nmMAcqVip0Fleh5NivXK3W0',
-                onRefreshToken: function () {
-                    return 'Pat_A4hZ6k8R9GcCNfCFUhVksZFahefe0tgkFV1vDkdf9nmMAcqVip0Fleh5NivXK3W0';
-                }
-            }
-        });
+    <footer>
+        &copy; 2026 FIFA Compliance AI. All rights reserved.
+    </footer>
+
+    <!-- Voiceflow Web Chat Widget -->
+    <script type="text/javascript">
+      (function(d, t) {
+          var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          v.onload = function() {
+            window.voiceflow.chat.load({
+              verify: { projectID: '6a5fe7a79d586a12b8838d45' },
+              url: 'https://general-runtime.voiceflow.com',
+              voice: {
+                url: "https://runtime-api.voiceflow.com"
+              }
+            });
+          }
+          v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+      })(document, 'script');
     </script>
 
 </body>
