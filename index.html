@@ -57,30 +57,18 @@
             margin-left: auto;
             margin-right: auto;
         }
-        .btn-chat {
-            display: inline-block;
-            background: linear-gradient(135deg, #0284c7, #0369a1);
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.15rem;
-            padding: 18px 36px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(2, 132, 199, 0.4);
-            transition: all 0.2s ease;
-            margin-bottom: 30px;
-        }
-        .btn-chat:hover {
-            background: linear-gradient(135deg, #0369a1, #075985);
-            transform: translateY(-2px);
-        }
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 16px;
+            margin-top: 10px;
             text-align: left;
-            border-top: 1px solid #334155;
-            padding-top: 25px;
+        }
+        .feature-item {
+            background: #0f172a;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #334155;
         }
         .feature-item h3 {
             font-size: 1rem;
@@ -88,10 +76,20 @@
             margin-bottom: 6px;
         }
         .feature-item p {
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             margin-bottom: 0;
             color: #64748b;
             line-height: 1.4;
+        }
+        .chat-hint {
+            margin-top: 28px;
+            padding: 12px;
+            background-color: rgba(2, 132, 199, 0.1);
+            border: 1px dashed #0284c7;
+            border-radius: 8px;
+            color: #38bdf8;
+            font-size: 0.9rem;
+            font-weight: 500;
         }
     </style>
 </head>
@@ -102,11 +100,6 @@
         <h1>FIFA Compliance Portal</h1>
         <p>Expert legal guidance on FIFA Regulations, Protection of Minors, FIFA Clearing House procedures, and Transfer Matching System (TMS) compliance based on the work of Paul Velásquez.</p>
 
-        <!-- Enlace directo oficial al chat limpio del bot -->
-        <a href="https://www.coze.com/chat/7663564679269203973" target="_blank" class="btn-chat">
-            Start Compliance Chat 💬
-        </a>
-
         <div class="features">
             <div class="feature-item">
                 <h3>Minors Protection</h3>
@@ -114,14 +107,37 @@
             </div>
             <div class="feature-item">
                 <h3>Clearing House</h3>
-                <p>Training compensation, electronic passports, and solidarity contributions.</p>
+                <p>Training compensation, electronic passports, and solidarity contribution calculations.</p>
             </div>
             <div class="feature-item">
                 <h3>Regulatory Search</h3>
-                <p>Instant answers on current FIFA statutes and legal frameworks.</p>
+                <p>Instant answers on current FIFA statutes, jurisprudence, and enforcement.</p>
             </div>
+        </div>
+
+        <div class="chat-hint">
+            💬 Click on the chat icon at the bottom right corner of your screen to start consulting.
         </div>
     </div>
 
+    <!-- Script Oficial del Webchat de Coze con Autenticación Personalizada -->
+    <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app/sdk/1.1.0-beta.0/libs/oversea/index.js"></script>
+    <script>
+        new CozeWebSDK.WebChat({
+            config: {
+                bot_id: '7663564679269203973',
+            },
+            auth: {
+                type: 'token',
+                token: 'Pat_A4hZ6k8R9GcCNfCFUhVksZFahefe0tgkFV1vDkdf9nmMAcqVip0Fleh5NivXK3W0',
+                onAccessTokenLifespanExpire: () => {},
+            },
+            componentProps: {
+                title: 'FIFA Compliance AI',
+            },
+        });
+    </script>
+
 </body>
 </html>
+        
