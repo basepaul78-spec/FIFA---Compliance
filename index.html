@@ -1,0 +1,181 @@
+import os
+
+html_content = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA Compliance AI Assistant | Member Portal</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+        header {
+            background-color: #1e293b;
+            padding: 16px 24px;
+            border-bottom: 1px solid #334155;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-badge {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+        .title-text h1 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+        .title-text p {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+        .status-tag {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #38bdf8;
+            background-color: rgba(56, 189, 248, 0.1);
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #22c55e;
+        }
+        main {
+            flex: 1;
+            position: relative;
+            background-color: #0f172a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .welcome-card {
+            text-align: center;
+            max-width: 500px;
+            padding: 32px;
+            background-color: #1e293b;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        .welcome-card h2 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: #f8fafc;
+        }
+        .welcome-card p {
+            font-size: 14px;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .instruction-box {
+            background-color: #0f172a;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+            text-align: left;
+            font-size: 13px;
+            color: #cbd5e1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo-badge">FIFA AI</div>
+            <div class="title-text">
+                <h1>Clearing House & Article 19 Advisor</h1>
+                <p>Professional Compliance Engine</p>
+            </div>
+        </div>
+        <div class="status-tag">
+            <span class="status-dot"></span>
+            <span>Active Subscription</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="welcome-card">
+            <h2>Welcome to your Legal Assistant</h2>
+            <p>Click on the chat icon in the bottom right corner to start querying FIFA regulations, Article 19 exemptions, and Clearing House protocols.</p>
+            <div class="instruction-box">
+                <strong>Tip:</strong> You can ask about required documentation, minor player transfers, or training compensation claims.
+            </div>
+        </div>
+    </main>
+
+    <!-- PASTE YOUR COZE CHAT SDK CODE BELOW THIS LINE -->
+    
+<script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
+<script>
+  new CozeWebSDK.WebChatClient({
+    config: {
+      bot_id: '7663564679269203973',
+    },
+    componentProps: {
+      title: 'Coze',
+    },
+    auth: {
+      type: 'token',
+      token: 'pat_********',
+      onRefreshToken: function () {
+        return 'pat_********'
+      }
+    }
+  });
+</script>
+<script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
+<script>
+  new CozeWebSDK.WebChatClient({
+    config: {
+      bot_id: '7663564679269203973',
+    },
+    componentProps: {
+      title: 'Coze',
+    },
+    auth: {
+      type: 'token',
+      token: 'pat_********',
+      onRefreshToken: function () {
+        return 'pat_********'
+      }
+    }
+  });
+</script>
+    <!-- END OF COZE CODE -->
+</body>
+</html>
+"""
+
+with open("index.html", "w") as f:
+    f.write(html_content)
