@@ -120,24 +120,26 @@
         </div>
     </div>
 
-    <!-- Script Oficial del Webchat de Coze con Autenticación Personalizada -->
-    <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app/sdk/1.1.0-beta.0/libs/oversea/index.js"></script>
+    <!-- Script Oficial de Coze WebChatClient v1.2.0-beta.6 con Autenticación Integrada -->
+    <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
     <script>
-        new CozeWebSDK.WebChat({
+        new CozeWebSDK.WebChatClient({
             config: {
                 bot_id: '7663564679269203973',
-            },
-            auth: {
-                type: 'token',
-                token: 'Pat_A4hZ6k8R9GcCNfCFUhVksZFahefe0tgkFV1vDkdf9nmMAcqVip0Fleh5NivXK3W0',
-                onAccessTokenLifespanExpire: () => {},
             },
             componentProps: {
                 title: 'FIFA Compliance AI',
             },
+            auth: {
+                type: 'token',
+                token: 'Pat_A4hZ6k8R9GcCNfCFUhVksZFahefe0tgkFV1vDkdf9nmMAcqVip0Fleh5NivXK3W0',
+                onRefreshToken: function () {
+                    return 'Pat_A4hZ6k8R9GcCNfCFUhVksZFahefe0tgkFV1vDkdf9nmMAcqVip0Fleh5NivXK3W0';
+                }
+            }
         });
     </script>
 
 </body>
 </html>
-        
+            
