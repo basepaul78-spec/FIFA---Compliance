@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,24 +23,27 @@
             text-align: center;
         }
         .container {
-            max-width: 600px;
+            max-width: 800px;
             width: 100%;
             background: #1e293b;
-            padding: 40px 30px;
+            padding: 30px 20px;
             border-radius: 16px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
             border: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         h1 {
-            font-size: 2rem;
-            margin-bottom: 16px;
+            font-size: 1.8rem;
+            margin-bottom: 12px;
             color: #38bdf8;
         }
         p {
-            font-size: 1.1rem;
-            line-height: 1.6;
+            font-size: 1rem;
+            line-height: 1.5;
             color: #94a3b8;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
         .badge {
             display: inline-block;
@@ -50,9 +53,16 @@
             border-radius: 20px;
             font-size: 0.875rem;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             text-transform: uppercase;
             letter-spacing: 0.05em;
+        }
+        .chat-frame {
+            width: 100%;
+            height: 550px;
+            border: none;
+            border-radius: 12px;
+            background-color: #0f172a;
         }
     </style>
 </head>
@@ -61,23 +71,15 @@
         <span class="badge">Official Portal</span>
         <h1>FIFA Compliance Assistant</h1>
         <p>Welcome to the official portal for FIFA Regulations, Clearing House, and Protection of Minors compliance queries.</p>
-        <p>Click the chat button in the bottom right corner to start your consultation with the AI Assistant.</p>
+        
+        <!-- Chat Embebido Directo -->
+        <iframe 
+            src="https://www.coze.com/store/bot/7663564679269203973" 
+            class="chat-frame"
+            allow="microphone">
+        </iframe>
     </div>
-
-    <!-- Coze Web SDK (Sin bloque auth para evitar el error 502) -->
-    <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
-    <script>
-      new CozeWebSDK.WebChatClient({
-        config: {
-          bot_id: '7663564679269203973',
-        },
-        componentProps: {
-          title: 'FIFA Compliance AI',
-          lang: 'en',
-        }
-      });
-    </script>
 </body>
 </html>
-
+ 
     
