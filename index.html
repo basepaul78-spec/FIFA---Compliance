@@ -19,15 +19,109 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            padding: 16px;
+            padding: 20px;
         }
         .card {
             width: 100%;
-            max-width: 800px;
+            max-width: 850px;
             background-color: #1e293b;
             border: 1px solid #334155;
             border-radius: 16px;
-            padding: 32px 24px;
+            padding: 40px 28px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
             text-align: center;
-                     
+        }
+        .badge {
+            display: inline-block;
+            background-color: #0284c7;
+            color: #ffffff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            letter-spacing: 0.05em;
+        }
+        h1 {
+            font-size: 2.2rem;
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 32px;
+            line-height: 1.6;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-chat {
+            display: inline-block;
+            background: linear-gradient(135deg, #0284c7, #0369a1);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.15rem;
+            padding: 18px 36px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(2, 132, 199, 0.4);
+            transition: all 0.2s ease;
+            margin-bottom: 30px;
+        }
+        .btn-chat:hover {
+            background: linear-gradient(135deg, #0369a1, #075985);
+            transform: translateY(-2px);
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            text-align: left;
+            border-top: 1px solid #334155;
+            padding-top: 25px;
+        }
+        .feature-item h3 {
+            font-size: 1rem;
+            color: #38bdf8;
+            margin-bottom: 6px;
+        }
+        .feature-item p {
+            font-size: 0.85rem;
+            margin-bottom: 0;
+            color: #64748b;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <span class="badge">Official AI Assistant</span>
+        <h1>FIFA Compliance Portal</h1>
+        <p>Expert legal guidance on FIFA Regulations, Protection of Minors, FIFA Clearing House procedures, and Transfer Matching System (TMS) compliance based on the work of Paul Velásquez.</p>
+
+        <!-- Enlace directo oficial al chat limpio del bot -->
+        <a href="https://www.coze.com/chat/7663564679269203973" target="_blank" class="btn-chat">
+            Start Compliance Chat 💬
+        </a>
+
+        <div class="features">
+            <div class="feature-item">
+                <h3>Minors Protection</h3>
+                <p>Rules & exceptions for international transfers of youth players (Article 19 RSTP).</p>
+            </div>
+            <div class="feature-item">
+                <h3>Clearing House</h3>
+                <p>Training compensation, electronic passports, and solidarity contributions.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Regulatory Search</h3>
+                <p>Instant answers on current FIFA statutes and legal frameworks.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
