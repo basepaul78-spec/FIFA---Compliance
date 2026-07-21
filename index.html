@@ -64,7 +64,7 @@
         <p>Click the chat button in the bottom right corner to start your consultation with the AI Assistant.</p>
     </div>
 
-    <!-- Coze Web SDK Client -->
+    <!-- Coze Web SDK (Sin bloque auth para evitar el error 502) -->
     <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
     <script>
       new CozeWebSDK.WebChatClient({
@@ -74,16 +74,10 @@
         componentProps: {
           title: 'FIFA Compliance AI',
           lang: 'en',
-        },
-        auth: {
-          type: 'token',
-          token: 'pat_********',
-          onRefreshToken: function () {
-            return 'pat_********';
-          }
         }
       });
     </script>
 </body>
 </html>
-  
+
+    
